@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحريك البالونات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-image: url('happy Birthday.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Amatic SC', cursive;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .balloon:hover {
+            transform: scale(1.1);
+        }
+        .large-bold-text {
+            font-size: 48px; /* حجم الخط */
+            font-weight: bold; /* جعل النص عريض */
+            position: absolute;
+            top: 165px; /* المسافة من الأعلى */
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .large-bold-text span {
+            color: #1645dd; /* لون النص الافتراضي */
+            transition: color 0.3s ease;
+        }
+        .large-bold-text span:hover {
+            color: #ff004c; /* لون النص عند التمرير */
+        }
+        .large-bold-text .color1 {
+            color: #bd4d4d; /* لون النص الأول */
+        }
+        .large-bold-text .color2 {
+            color: #ff004c; /* لون النص الثاني */
+        }
+        .large-bold-text .color3 {
+            color: #0000ff; /* لون النص الثالث */
+        }
+        .center-images {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px; /* المسافة بين الصور */
+        }
+        .center-images img {
+            width: 200px; /* عرض الصورة */
+            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(30, 34, 226, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .center-images img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="large-bold-text">
+        <span class="color1">M</span>
+        <span class="color2">y</span>
+        <span class="color3"> </span>
+        <span class="color1">D</span>
+        <span class="color2">e</span>
+        <span class="color3">a</span>
+        <span class="color1">r</span>
+        <span class="color2"> ♡</span>
+    </div>
+    <div class="center-images">
+        <img src="download (5).jpeg" alt="Center Image 1">
+        <img src="photo.jpg" alt="Center Image 2">
+        <img src="download (3).jpeg" alt="Center Image 3">
+    </div>
+    <div class="balloon" id="balloon1"></div>
+    <div class="balloon" id="balloon2"></div>
+    <div class="balloon" id="balloon3"></div>
+    <script src="script.js"></script>
+</body>
+</html>
